@@ -1,9 +1,9 @@
 #include <stdio.h>
 
+int push
+
 int main(void){
 	
-	printf("hello wolrd1\n");
-	for(int i = 0;i<9;i++){
-		
+
 	}
 }

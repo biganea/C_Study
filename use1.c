@@ -1,9 +1,16 @@
 #include <stdio.h>
 
+struct Person {
+	int age;
+	int hight;
+	int kg;
+};
+
 int main(void){
-	
-	printf("hello wolrd1\n");
-	for(int i = 0;i<9;i++){
-		
-	}
+	struct Person p1;
+
+	p1.age = 24;
+
+	printf("%d",p1.age);
+
 }

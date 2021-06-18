@@ -15,20 +15,23 @@ int main(void){
 		}
 		printf("\n");
 	}
+			printf("\n");
 	for(i=4;i>=0;i--){
 		for(k=0;k<5;k++){
 			printf("%d ",arr[k][i]);
 		}
 		printf("\n");
 	}
-
+		printf("\n");
+	
 	for(i=4;i>=0;i--){
 		for(k=4;k>=0;k--){
 			printf("%d ",arr[i][k]);
 		}
 		printf("\n");
 	}
-
+		printf("\n");
+	
 	for(i=0;i<5;i++){
 		for(k=4;k>=0;k--){
 			printf("%d ",arr[k][i]);

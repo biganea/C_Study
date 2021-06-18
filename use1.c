@@ -1,39 +1,78 @@
 #include <stdio.h>
 
+typedef struct HNODE{
+	int cnt;
+	struct DNODE *Front;
+	struct DNODE *Rear;
+}HeadNode;
+
+typedef struct DNODE{
+	char std_num;
+	char name;
+	char major;
+	int midterm;
+	int final;
+	int report;
+	int attend;
+	int average;
+	struct DNODE *Next;
+	struct DNODE *Prev;
+}DataNode;
+
+HeadNode Head;
+
+void init(){
+
+	printf("1.데이터 출력");
+	printf("2.데이터 추가");
+	printf("3.데이터 검색");
+	printf("4.데이터 수정");
+	printf("5.종료");
+
+}
+void get_num(int input){
+
+
+	if(input==1){
+	printf("1.전체 데이터 출력(입력순)");
+	printf("2.이름으로 정렬 후 출력");
+	printf("3.학번으로 정렬 후 출력");
+	printf("4.학과으로 정렬 후 출력");
+	printf("5.총점으로 정렬 후 출력");
+	}
+	else if(input==2){
+
+
+	}
+	else if(input==3){
+	printf("1.이름으로 검색");
+	printf("2.이름으로 검색");
+	printf("3.학과로 검색");
+	printf("4.입력 번호로 검색");
+
+	}
+	else if(input==4){
+	printf("1.이름으로 검색 후 수정");
+	printf("2.학번으로 검색 후 수정");
+	printf("3.입력(block) 번호로 검색");
+	}
+	else if(input==5){
+	return;
+	}
+}
+
+
+
 int main(void){
-	int i,k;
 
-	int arr[5][5] = {{1,2,3,4,5},
-									{6,7,8,9,10},
-									{11,12,13,14,15},
-									{16,17,18,19,20},
-									{21,22,23,24,25}};
+	Head.cnt = 0;
+	Head.Front = NULL;
+	Head.Rear = NULL;
 
-	for(i=0;i<5;i++){
-		for(k=0;k<5;k++){
-			printf("%d ",arr[i][k]);
-		}
-		printf("\n");
-	}
-	for(i=4;i>=0;i--){
-		for(k=0;k<5;k++){
-			printf("%d ",arr[k][i]);
-		}
-		printf("\n");
-	}
+	int input;
 
-	for(i=4;i>=0;i--){
-		for(k=4;k>=0;k--){
-			printf("%d ",arr[i][k]);
-		}
-		printf("\n");
-	}
+	init();
 
-	for(i=0;i<5;i++){
-		for(k=4;k>=0;k--){
-			printf("%d ",arr[k][i]);
-		}
-		printf("\n");
-	}
-
+	scanf("%d",&input);
+	get_num(input);
 }
